@@ -83,6 +83,8 @@ def ab_cover(a, b):
 
 @cocotb.test()
 async def dut_test(dut):
+    cocotb.simulator.dumpfile("fifo.vcd")
+    cocotb.simulator.dumpvars(0, dut)
     # Clock setup
     clk = dut.CLK
     clock = Clock(clk, 10, units="ns")
