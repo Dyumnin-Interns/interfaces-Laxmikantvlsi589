@@ -9,6 +9,7 @@
 
 
 import cocotb
+from cocotb.clock import Clock
 from cocotb.triggers import RisingEdge, Timer
 from cocotb_coverage.coverage import CoverPoint, CoverCross, coverage_db
 import os
