@@ -82,6 +82,8 @@ def ab_cover(a, b):
 @cocotb.test()
 async def dut_test(dut):
     clk = dut.CLK
+    clock = Clock(clk, 10, units="ns") 
+    cocotb.start_soon(clock.start())    
     sb = Scoreboard()
     adrv = InputDriver(dut, "a", addr=4, clk=clk)
     bdrv = InputDriver(dut, "b", addr=5, clk=clk)
