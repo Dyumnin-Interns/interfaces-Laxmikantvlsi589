@@ -223,7 +223,7 @@ def coverage_func(a, b):
 
 
 @cocotb.test()
-async def test_or_gate_register_interface(dut):
+async def test_register_mapped_fifo(dut):
     # Clock setup
     cocotb.start_soon(Clock(dut.CLK, 10, units="ns").start())
 
